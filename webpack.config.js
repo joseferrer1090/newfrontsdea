@@ -11,7 +11,7 @@ module.exports = env => {
 
   return {
     entry: {
-      "application-user": path.resolve(__dirname, "./src/index.js")
+      "newfrontsdea": path.resolve(__dirname, "./src/index.js")
     },
     output: {
       path: path.resolve(__dirname, "dist"),
@@ -20,7 +20,7 @@ module.exports = env => {
       chunkFilename: "js/[id].[chunkhash].js"
     },
     devServer: {
-      port: 3000
+      port: 3001
     },
     module: {
       rules: [

@@ -2,14 +2,14 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    "application-user": path.resolve(__dirname, "./src/index.js")
+    "newfrontsdea": path.resolve(__dirname, "./src/index.js")
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js"
   },
   devServer: {
-    port: 3000
+    port: 3001
   },
   module: {
     rules: [
