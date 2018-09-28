@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, HashRouter, Route } from "react-router-dom";
-import { browserHistory } from "react-router"
+
 
 
 // Components for Sessions
@@ -15,10 +15,10 @@ export default class App extends Component {
             <HashRouter>
                 <Switch>
                     <Route exact path="/" component={Login} />
-                    <Route exact path="/login" component={Login}></Route>
-                    <Route exact path="/register" component={Register}></Route>
-                    <Route exact path="/forgot" component={Forgot}></Route>
-                    <Route component={ErrorPage}></Route>
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/register" component={Register}/>  
+                    <Route exact path="/forgot" component={Forgot}/>
+                    <Route component={ErrorPage}/>
                 </Switch>
             </HashRouter>
         )
