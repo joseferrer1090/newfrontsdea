@@ -1,6 +1,8 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 module.exports = env => {
   const plugins = [new ExtractTextPlugin("css/[name].[hash].css")];
@@ -20,7 +22,8 @@ module.exports = env => {
       chunkFilename: "js/[id].[chunkhash].js"
     },
     devServer: {
-      port: 3001
+      port: 3001,
+      compress: true
     },
     module: {
       rules: [
@@ -62,6 +65,8 @@ module.exports = env => {
         }
       ]
     },
-    plugins
+    plugins: [new HtmlWebpackPlugin({
+      template: "./public/index.html"
+    })]
   };
 };
